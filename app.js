@@ -6,12 +6,10 @@ app.listen(3000);
 
 // to get a request 
 app.get('/', (req,res) => {
-    res.sendFile('./pages/index.html', {root: __dirname});
+   res.send('<h1> Home page</h1>');
 });
 
-app.get('/contact', (req,res) => {
-    res.sendFile('./pages/contact.html', {root: __dirname});
-});
+
 
 
 
