@@ -12,6 +12,14 @@ app.get('/', (req,res) => {
 app.get('/contact', (req,res) => {
     res.sendFile('./pages/contact.html', {root: __dirname});
 });
+app.get('/about', (req,res) => {
+    res.sendFile('./pages/about.html', {root: __dirname});
+});
+
+// let's redirect '/contact-us' to '/contact'
+app.get('/contact-us',(req,res) =>{
+    res.redirect('/');
+});
 
 
 
