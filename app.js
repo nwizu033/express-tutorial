@@ -17,6 +17,15 @@ app.get('/contact-us',(req,res) =>{
     res.redirect('/');
 });
 
+/*404 is usually the last part of routing as express runs the code from 
+top to bottom checking paths that match. If the path doesn't match
+it now fires the 404 page. we use it thus;
+*/
+app.use((req,res) =>{
+    res.status(404).sendFile('./pages/404.html',{root:__dirname});
+});
+
+
 
 
 
